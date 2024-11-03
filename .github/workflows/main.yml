@@ -2,7 +2,7 @@ name: lab2start
 run-name: ${{ github.actor }} is working
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  lab2start:
     runs-on: windows-latest
     steps:
       - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
