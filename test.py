@@ -6,4 +6,4 @@ def test_read_pop3_emails():
 
 def test_read_pop3_emails_mailru():
     with pytest.raises(TypeError):
-        assert read_pop3_emails((['pop.yandex.ru']), 'mariiamorina@yandex.ru', 'usoxwngsgsxurgsc') == None
+        assert read_pop3_emails(1, 2, 3) == None
