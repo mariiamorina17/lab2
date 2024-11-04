@@ -34,3 +34,5 @@ jobs:
       - name: Running prog
         run: |  
           python pop3main.py
+      - name: Update doc
+        run: date +%s > doc.txt
