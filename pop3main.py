@@ -34,6 +34,7 @@ def read_pop3_emails(server, email, password): # функция для выпо�
     # вывод сообщения об ошибке
     except Exception as e:
         print(f"Ошибка: {e}")
+        raise
 
 if __name__ == "__main__": # основная функция
     POP3_SERVER = 'pop.yandex.ru'  # почтовый сервер
