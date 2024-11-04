@@ -34,7 +34,3 @@ jobs:
       - name: Running prog
         run: |  
           python pop3main.py
-      - name: Update doc
-        run: chmod 777 doc.txt
-             date +%s > doc.txt
-             echo " lab2 ~ update \n" | tee doc.txt
