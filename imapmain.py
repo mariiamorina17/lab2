@@ -69,5 +69,5 @@ if typ == 'OK': # если не возникло ошибок
         email_message = email.message_from_bytes(msg_data[0][1]) # декодируем письмо
         print(f'Letter #{i+1}: {email_message["From"]} ~ {email_message["Subject"]}') # выводим имя отправителя и заголовок письма
 
-imap_server.close() # закрываем соединение с сервером
-imap_server.logout() # выходим из почтового ящика
+imap_server.close() # закрытие соединения
+imap_server.logout() # выход из почтового ящика

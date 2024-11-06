@@ -37,8 +37,8 @@ def read_pop3_emails(server, email, password): # функция для выпо�
         raise
 
 if __name__ == "__main__": # основная функция
-    POP3_SERVER = 'pop.yandex.ru'  # почтовый сервер
-    EMAIL = 'mariiamorina@yandex.ru' # адрес почты
-    PASSWORD = 'usoxwngsgsxurgsc' # пароль
+    # POP3_SERVER = 'pop.yandex.ru'  # почтовый сервер
+    # EMAIL = 'mariiamorina@yandex.ru' # адрес почты
+    # PASSWORD = 'usoxwngsgsxurgsc' # пароль
 
-    read_pop3_emails(POP3_SERVER, EMAIL, PASSWORD) # функция для работы с письмами
+    read_pop3_emails('pop.yandex.ru', 'mariiamorina@yandex.ru', 'usoxwngsgsxurgsc') # функция для работы с письмами
