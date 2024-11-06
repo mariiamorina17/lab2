@@ -7,7 +7,27 @@ permissions:
   pull-requests: write
 
 jobs:
-  dependabot:
+  generatedocupdate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Download and Install git-cliff
+        run: |
+          curl -L "https://github.com/orhun/git-cliff/releases/download/v2.2.1/git-cliff-2.2.1-x86_64-unknown-linux-gnu.tar.gz" -o git-cliff.tar.gz 
+          tar -xzf git-cliff.tar.gz
+          mv git-cliff-2.2.1/git-cliff /usr/local/bin/
+      - name: Generate Changelog
+        run: git-cliff --config cliff.toml --output DOC.md
+      - name: Commit Changelog
+        run: |
+          git config --global user.name 'Mariia Morina'
+          git config --global user.email mariiamorina17@mail.ru
+          git add DOC.md
+          git commit -m "Обновление DOC.md"
+          git push https://github.com/${{ github.repository }}.git HEAD:release
+  merge:
     runs-on: ubuntu-latest
     if: ${{ github.actor == 'mariiamorina17' }}
     steps:

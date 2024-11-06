@@ -13,7 +13,7 @@ To: mariiamorina17@mail.ru
 Subject: Lab1.
 Content-Type: text/plain; charset="UTF-8";
 
-Hello! Straighten your back, smile and look at the bright sun outside the window! Have a nice day!
+Have a nice day!
 """
 
 # создание объекта SMTP и отправка письма
