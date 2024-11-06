@@ -3,7 +3,7 @@ name: Generate Doc
 on:
   push:
     branches:
-      - main
+      - release
   release:
     types: [created]
 jobs:
