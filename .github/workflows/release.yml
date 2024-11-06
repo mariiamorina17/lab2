@@ -15,9 +15,9 @@ jobs:
         fetch-depth: 0
     - name: Download and Install git-cliff
       run: |  
-        curl -L "https://github.com/orhun/git-cliff/releases/download/v2.2.1/git-cliff-2.2.1-x86_64-unknown-linux-gnu.tar.gz" -o git-cliff.tar.gz  # Скачивание git-cliff
-        tar -xzf git-cliff.tar.gz  # Распаковка скачанного архива
-        mv git-cliff-2.2.1/git-cliff /usr/local/bin/  # Перемещение исполняемого файла git-cliff в директорию /usr/local/bin
+        curl -L "https://github.com/orhun/git-cliff/releases/download/v2.2.1/git-cliff-2.2.1-x86_64-unknown-linux-gnu.tar.gz" -o git-cliff.tar.gz
+        tar -xzf git-cliff.tar.gz
+        mv git-cliff-2.2.1/git-cliff /usr/local/bin/
     - name: Generate Doc
       run: git-cliff --config cliff.toml --output DOC.md
     - name: Commit Doc
@@ -25,7 +25,7 @@ jobs:
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
         git add DOC.md
-        git commit -m "Обновление DOC.md"
+        git commit -m "update DOC.md"
         git push https://github.com/${{ github.repository }}.git HEAD:release
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
