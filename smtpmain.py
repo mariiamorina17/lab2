@@ -13,7 +13,7 @@ To: mariiamorina17@mail.ru
 Subject: Lab1.
 Content-Type: text/plain; charset="UTF-8";
 
-Have a nice day!
+Lab is working!
 """
 
 # создание объекта SMTP и отправка письма
