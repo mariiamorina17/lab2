@@ -26,6 +26,6 @@ jobs:
         git config --global user.email 'github-actions@github.com'
         git add DOC.md
         git commit -m "Обновление DOC.md"
-        git push https://github.com/${{ github.repository }}.git HEAD:main
+        git push https://github.com/${{ github.repository }}.git HEAD:release
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
